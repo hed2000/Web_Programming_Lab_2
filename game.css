@@ -16,12 +16,14 @@
 }
 
 #title {
+    width: 1200px;
     background-color: rgb(128, 128, 128);
     align-content: center;
     align-self: center;
 }
 
 #scores {
+    width: 1200px; 
     background-color: rgb(247, 134, 241);
     align-content: center;
     align-self: center;
