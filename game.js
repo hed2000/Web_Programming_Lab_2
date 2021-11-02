@@ -51,8 +51,6 @@ function start() {
 	makeBees();
 	//update bees
 	updateBees();
-	var count = 0;
-	updateDuration();
 }
 
 // Handle keyboad events 
@@ -224,10 +222,3 @@ function overlap(element1, element2) {
 	}
 	return true;
 }
-
-function updateDuration() {
-	count += 1;
-	document.getElementById("lblText").innerHTML = count;
-	t = setTimeout("updateDuration()", 1);
-}
-
