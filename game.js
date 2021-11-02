@@ -49,6 +49,8 @@ function start() {
 	bees = new Array();
 	//create bees
 	makeBees();
+	//update bees
+	updateBees();
 }
 
 // Handle keyboad events 
