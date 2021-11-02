@@ -168,3 +168,23 @@ function getRandomInt(max) {
 		max += 1;	// adds 1 to the max, as the range of numbers generated is one less than the max 
 		return Math.floor(Math.random() * max);
 	}
+
+function moveBees() {
+	//get speed input field value
+	let speed = document.getElementById("speedBees").value;
+	//move each bee to a random location
+	for (let i = 0; i < bees.length; i++) {
+		let dx = getRandomInt(2 * speed) - speed;
+		let dy = getRandomInt(2 * speed) - speed;
+		bees[i].move(dx, dy);
+	}
+}
+
+function updateBees() { // update loop for game
+	//move the bees randomly
+	moveBees();
+	//use a fixed update period
+	let period = 10;//modify this to control refresh period
+	//update the timer for the next move
+	updateTimer = setTimeout('updateBees()', period);
+}
