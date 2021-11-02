@@ -11,10 +11,11 @@ function Bear() {
 	this.y = this.htmlElement.offsetTop;
 
 	this.move = function(xDir, yDir) {
+		this.fitBounds(); //we add this instruction to keep bear within board
 		this.x += this.dBear * xDir;
-		this.y += this.dBear * yDir; 
+		this.y += this.dBear * yDir;
 		this.display();
-	}
+	};
 
 	this.display = function() {
 		this.htmlElement.style.left = this.x + "px"; 
@@ -61,12 +62,5 @@ function moveBear(e) {
 	if (e.keyCode == KEYDOWN) {
 		bear.move(0, 1)
 	} // down key
-	
-	this.move = function(xDir, yDir) {
-		this.fitBounds(); //we add this instruction to keep bear within board
-		this.x += this.dBear * xDir;
-		this.y += this.dBear * yDir;
-		this.display();
-	};
 }
 
