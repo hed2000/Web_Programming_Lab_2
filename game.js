@@ -5,7 +5,7 @@ function Bear() {
 	this.x = this.htmlElement.offsetLeft;
 	this.y = this.htmlElement.offsetTop;
 	setSpeed = function() {
-		this.dBear = document.getElementById("speedBear").value 
+		this.dBear = document.getElementById("speedBear").value;
 	}
 	this.move = function(xDir, yDir) {	 
 		this.fitBounds();
