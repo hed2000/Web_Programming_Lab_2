@@ -1,5 +1,5 @@
 function Bear() {
-	this.dBear = document.getElementByID("speedBear").value;
+	this.dBear = document.getElementById("speedBear").value;
 	this.htmlElement = document.getElementById("bear");
 	this.id = this.htmlElement.id;
 	this.x = this.htmlElement.offsetLeft;
