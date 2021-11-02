@@ -188,6 +188,9 @@ function updateBees() { // update loop for game
 	moveBees();
 	//use a fixed update period
 	let period = document.getElementById("periodTimer").value; 
+	if (score >= 1000) {
+		clearTimeout(updateTimer); 
+	}
 	//update the timer for the next move
 	updateTimer = setTimeout('updateBees()', period);
 }
