@@ -143,6 +143,11 @@ function createBeeImg(wNum) {
 	img.style.top = (y) + "px";
 	//return the img object
 	return img;
+	
+	getRandomInt = function(max) {
+		max += 1;	// adds 1 to the max, as the range of numbers generated is one less than the max 
+		Math.floor(Math.random() * max);
+	}
 }
 
 function makeBees() {
