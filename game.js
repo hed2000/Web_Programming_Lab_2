@@ -1,5 +1,6 @@
 function start() {
 	bear = new Bear();
+	document.addEventListener("keydown", moveBear, false);
 }
 
 function Bear() {
