@@ -120,10 +120,6 @@ class Bee {
 
 
 function createBeeImg(wNum) {
-	getRandomInt = function(max) {
-		max += 1;	// adds 1 to the max, as the range of numbers generated is one less than the max 
-		return Math.floor(Math.random() * max);
-	}
 	//get dimension and position of board div
 	let boardDiv = document.getElementById("board");
 	let boardDivW = boardDiv.offsetWidth;
@@ -167,3 +163,8 @@ function makeBees() {
 		i++;
 	}
 }
+
+function getRandomInt(max) {
+		max += 1;	// adds 1 to the max, as the range of numbers generated is one less than the max 
+		return Math.floor(Math.random() * max);
+	}
