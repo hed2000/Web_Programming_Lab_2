@@ -188,7 +188,7 @@ function updateBees() { // update loop for game
 	moveBees();
 	//use a fixed update period
 	let period = document.getElementById("periodTimer").value; 
-	if (hits.innerHRML < 999) {
+	if (hits.innerHTML < 19) {
 		clearTimeout(updateTimer);
 	}
 	else {
