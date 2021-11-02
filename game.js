@@ -8,9 +8,9 @@ function Bear() {
 		this.dBear = document.getElementById("speedBear").value;
 	}
 	this.move = function(xDir, yDir) {	 
-		this.fitBounds();
  	 	this.x += this.dBear * xDir;
 		this.y += this.dBear * yDir;
+		this.fitBounds();
 		this.display();
  	};
  	this.display = function() {
