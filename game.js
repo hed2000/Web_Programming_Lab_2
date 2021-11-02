@@ -1,3 +1,7 @@
+function start() {
+	bear = new Bear();
+}
+
 function Bear() {
 	this.dBear = 100;
 	this.htmlElement = document.getElementById("bear"); 
