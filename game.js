@@ -42,9 +42,10 @@ function Bear() {
 }
 
 function start() {
-	//reset hits and duration
+	//reset hits, duration, and game over screen
 	document.getElementById("hits").innerHTML = 0; 
 	document.getElementById("duration").innerHTML = "?";
+	document.getElementById("game-over").style.display = "none";
 	//reset bees array in the event of bees already existing, by using function to hide the image, then popping them from the array
 	if (bees != undefined) {
 		for (let i = 0; i < bees.length; i++) {
