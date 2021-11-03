@@ -40,3 +40,10 @@
 #duration {
     color: blue;
 }
+
+#game-over {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
