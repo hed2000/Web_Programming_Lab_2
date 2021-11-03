@@ -45,6 +45,13 @@ function start() {
 	//reset hits and duration
 	document.getElementById("hits").innerHTML = 0; 
 	document.getElementById("duration").innerHTML = "?";
+	//reset bees array in the event of bees already existing, by using function to hide the image, then popping them from the array
+	if (bees != undefined) {
+		for (let i = 0; i < bees.length; i++) {
+			bees[i].htmlElement.style.display = "none";
+		}
+		bees = [];
+	}
 	//variable to keep track of whether bear has moved
 	moved = false
  	//create bear
@@ -52,11 +59,6 @@ function start() {
 	document.addEventListener("keydown", moveBear, false);
 	//create new array for bees
 	bees = new Array();
-	//reset bees array in the event of bees already existing, by using function to hide the image, then popping them from the array
-	for (let i = 0; i < bees.length; i++) {
-		bees[i].htmlElement.style.display = "none";
-	}
-	bees = [];
 	//create bees
 	makeBees();
 	//update bees
