@@ -23,10 +23,10 @@
 
         <div id="title">
             <h1>Help the bear escape the bees !</h1>
-            <p>Bear tries to avoid being stung by <input type="text" id="nbBees" value="1" size="3"> bees by running and jumping. The objective is to have as less stings as possible!</p>
-            <p>You can ajust bees' speed <input type="text" id="speedBees" value="50" size="3"> px/ms
-                <br> the bear's speed <input onchange="bear.setSpeed()" type="text" id="speedBear" value="100" size="3"> px/ms 
-                <br> and the refresh period <input type="text" id="periodTimer" value="10" size="3"> ms 
+            <p>Help the bear avoid being stung by <input type="text" id="nbBees" value="1" size="3"> bees by moving around the screen. The objective is to get stung as few times as possible! The game ends if you reach 1000+ stings.</p>
+            <p>You can adjust the bees' speed: <input type="text" id="speedBees" value="50" size="3"> px/ms,
+                <br> the bear's speed: <input onchange="bear.setSpeed()" type="text" id="speedBear" value="100" size="3"> px/ms,
+                <br> and how often the bees move: <input type="text" id="periodTimer" value="10" size="3"> ms. 
                 <br> <button type="button" id="restart" onclick="start()">Restart</button>
             </p>
             <h2>Press left, right, up, down keys to move the bear</h2>
