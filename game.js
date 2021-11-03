@@ -53,10 +53,10 @@ function start() {
 	//create new array for bees
 	bees = new Array();
 	//reset bees array in the event of bees already existing, by using function to hide the image, then popping them from the array
-	while (bees.length > 0) {
-		bees[0].hide();
-		bees.pop();
+	for (let i = 0; i < bees.length; i++) {
+		bees[i].htmlElement.style.display = "none";
 	}
+	bees = [];
 	//create bees
 	makeBees();
 	//update bees
@@ -116,9 +116,6 @@ class Bee {
 			this.htmlElement.style.top = this.y + "px";
 			this.htmlElement.style.display = "block";
 		};
-		this.hide = function() {
-			this.htmlElement.style.display = "none";
-		}
 		this.fitBounds = function() {
 			//check and make sure the bees stays in the board space
 			let parent = this.htmlElement.parentElement;
