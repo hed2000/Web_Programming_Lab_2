@@ -42,12 +42,18 @@ function Bear() {
 }
 
 function start() {
+	//reset hits and duration
+	document.getElementById("hits").innerHTML = 0; 
+	document.getElementById("duration").innerHTML = "?";
+	//variable to keep track of whether bear has moved
 	moved = false
  	//create bear
  	bear = new Bear();
 	document.addEventListener("keydown", moveBear, false);
 	//create new array for bees
 	bees = new Array();
+	//reset bees array in the event of restart button being pressed instead of page being reloaded
+	bees = []
 	//create bees
 	makeBees();
 	//update bees
@@ -57,6 +63,7 @@ function start() {
 
 function getTime() {
 	lastStingTime = new Date();
+	//set moved to true as keypress is needed to call this function
 	moved = true;
 }
 
