@@ -190,6 +190,7 @@ function updateBees() { // update loop for game
 	let period = document.getElementById("periodTimer").value; 
 	if (hits.innerHTML > 999) {
 		clearTimeout(updateTimer);
+		document.getElementById("game-over").style.display = "block";
 	}
 	else {
 		//update the timer for the next move
