@@ -51,7 +51,10 @@ function start() {
 	makeBees();
 	//update bees
 	updateBees();
-	//take start time
+	document.addEventListener("keydown", getTime);
+}
+
+function getTime() {
 	lastStingTime = new Date();
 }
 
