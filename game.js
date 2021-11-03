@@ -215,7 +215,7 @@ function isHit(defender, offender) {
 		} else {
 			if (longestDuration < thisDuration) longestDuration = thisDuration;
 		}
-		document.getElementById("duration").innerHTML = longestDuration;
+		document.getElementById("duration").innerHTML = Number(longestDuration);
 	}
 }
 
