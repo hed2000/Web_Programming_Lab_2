@@ -44,7 +44,7 @@ function Bear() {
 function start() {
 	//reset hits, duration, and game over screen
 	document.getElementById("hits").innerHTML = 0; 
-	document.getElementById("duration").innerHTML = "?";
+	document.getElementById("duration").innerHTML = 0;
 	document.getElementById("game-over").style.display = "none";
 	//reset bees array in the event of bees already existing, by using function to hide the image, then popping them from the array
 	if (bees != undefined) {
@@ -69,7 +69,6 @@ function start() {
 
 function getTime() {
 	lastStingTime = new Date();
-	lastStingTimeMs = lastStingTime.getTime(); 
 	//set moved to true as keypress is needed to call this function
 	moved = true;
 }
@@ -228,10 +227,8 @@ function isHit(defender, offender) {
 		hits.innerHTML = score; //display the new score
 		//calculate longest duration
 		let newStingTime = new Date();
-		// converting newStingTime into milliseconds 
-		let newStingTimeMs = newStingTime.getTime();
-		let thisDuration = newStingTimeMs - lastStingTimeMs;
-		lastStingTimeMs = newStingTimeMs;
+		let thisDuration = newStingTime - lastStingTime;
+		lastStingTime = newStingTime;
 		let longestDuration = Number(duration.innerHTML);
 		if (longestDuration === 0) {
 			longestDuration = thisDuration;
