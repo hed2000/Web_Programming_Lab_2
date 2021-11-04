@@ -1,3 +1,4 @@
+
 function Bear() {
 	this.dBear = document.getElementById("speedBear").value;
 	this.htmlElement = document.getElementById("bear");
@@ -238,6 +239,7 @@ function isHit(defender, offender) {
 			longestDuration = thisDuration;
 		} else {
 			if (longestDuration < thisDuration) longestDuration = thisDuration;
+		}
 		document.getElementById("duration").innerHTML = longestDuration;
 	}
 }
