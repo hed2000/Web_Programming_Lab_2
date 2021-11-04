@@ -70,8 +70,6 @@ function start() {
 
 function getTime() {
 	lastStingTime = new Date();
-	//get specified date in milliseconds
-	lastStingTimeMs = lastStingTime.getTime(); 
 	//set moved to true as keypress is needed to call this function
 	moved = true;
 }
@@ -230,10 +228,8 @@ function isHit(defender, offender) {
 		hits.innerHTML = score; //display the new score
 		//calculate longest duration
 		let newStingTime = new Date();
-		//convert new sting time to milliseconds
-		let newStingTimeMs = newStingTime.getTime();
-		let thisDuration = newStingTimeMs - lastStingTimeMs;
-		lastStingTimeMs = newStingTimeMs;
+		let thisDuration = newStingTime - lastStingTime;
+		lastStingTime = newStingTime;
 		let longestDuration = Number(duration.innerHTML);
 		if (longestDuration === 0) {
 			longestDuration = thisDuration;
