@@ -236,11 +236,9 @@ function isHit(defender, offender) {
 		let longestDuration = Number(duration.innerHTML);
 		if (longestDuration === 0) {
 			longestDuration = thisDuration;
-		} else if (longestDuration < thisDuration) {
-			longestDuration = thisDuration;
 		} else {
-			document.getElementById("duration").innerHTML = longestDuration;
-		}
+			if (longestDuration < thisDuration) longestDuration = thisDuration;
+		document.getElementById("duration").innerHTML = longestDuration;
 	}
 }
 
